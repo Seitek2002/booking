@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <input type="text" placeholder="Вылет" id="departure" />
+    <input type="text" placeholder="Когда" id="departure" />
   </div>
 </template>
 

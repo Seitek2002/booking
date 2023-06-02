@@ -1,6 +1,6 @@
 <template>
   <div @click="isShow = !isShow" class="wrapper" ref="dropdown">
-    <input type="text" placeholder="Откуда" v-model="fromVal" />
+    <input type="text" placeholder="Куда" v-model="fromVal" />
     <div v-if="isShow" class="dropdown">
       <div class="dropdown__select">
         <p v-for="item in filteredItems" :key="item" @click="fromVal = item">

@@ -4,7 +4,6 @@
       <From />
       <To />
       <WhenFrom />
-      <WhenTo />
       <Qnty />
     </form>
     <button class="ticketing__btn">Найти</button>
@@ -24,10 +23,16 @@ import Qnty from './Qnty.vue'
   display: flex;
   gap: 10px;
   border-radius: 8px;
+  width: 80%;
   margin: 0 auto;
 
   &__form {
     display: flex;
+    flex: 1;
+
+    input {
+      width: 100%;
+    }
   }
 
   &__btn {
@@ -43,39 +48,67 @@ import Qnty from './Qnty.vue'
     background: #fff;
     align-items: center;
     position: relative;
+    width: 100%;
 
     input {
       background: transparent;
       border: none;
-      padding: 11px;
+      padding: 20px;
       outline: none;
     }
 
     .dropdown {
-        position: absolute;
-        padding: 15px;
-        background: #fff;
-        top: 100%;
-        width: 100%;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
+      position: absolute;
+      padding: 15px;
+      box-sizing: border-box;
+      background: #fff;
+      top: 100%;
+      width: 100%;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      z-index: 11;
 
-        &__select {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+      &__select {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
 
-            p {
-                display: flex;
-                align-items: center;
-                gap: 5px;
-                cursor: pointer;
+        p {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          cursor: pointer;
 
-                svg {
-                    opacity: 0.5;
-                }
-            }
+          svg {
+            opacity: 0.5;
+          }
         }
+      }
+
+      &__qnty {
+        display: flex;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      &__val {
+        flex: 1;
+        border-right: 1px solid #ccc;
+        border-left: 1px solid #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &__plus,
+      &__minus {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
     }
   }
 }
