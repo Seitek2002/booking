@@ -24,7 +24,7 @@ import Qnty from './Qnty.vue'
   display: flex;
   gap: 10px;
   border-radius: 8px;
-  overflow: hidden;
+  margin: 0 auto;
 
   &__form {
     display: flex;
@@ -42,12 +42,40 @@ import Qnty from './Qnty.vue'
     display: flex;
     background: #fff;
     align-items: center;
+    position: relative;
 
     input {
       background: transparent;
       border: none;
       padding: 11px;
       outline: none;
+    }
+
+    .dropdown {
+        position: absolute;
+        padding: 15px;
+        background: #fff;
+        top: 100%;
+        width: 100%;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        &__select {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            p {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                cursor: pointer;
+
+                svg {
+                    opacity: 0.5;
+                }
+            }
+        }
     }
   }
 }
