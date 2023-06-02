@@ -1,18 +1,18 @@
 <template>
-  <div class="slider">
+  <div class="slider-news">
     <div class="container">
       <swiper :slides-per-view="4" :navigation="true" :modules="[Navigation]">
         <swiper-slide v-for="(slide, i) in slides" :key="i">
-          <div class="slider__box" :style="slide.bg">
-            <div class="slider__content" :style="slide.bgBox">
-              <div class="slider__top">
+          <div class="slider-news__box" :style="slide.bg">
+            <div class="slider-news__content" :style="slide.bgBox">
+              <div class="slider-news__top">
                 <img v-if="slide.icon" :src="slide.icon" alt="" />
               </div>
-              <div class="slider__info" :style="slide.textColor">
+              <div class="slider-news__info" :style="slide.textColor">
                 <h2>{{ slide.title }}</h2>
                 <p>{{ slide.description }}</p>
               </div>
-              <div class="slider__bottom">
+              <div class="slider-news__bottom">
                 <button :style="slide.btnColor">Подробнее</button>
               </div>
             </div>
@@ -85,11 +85,11 @@ const slides = ref([
 </script>
 
 <style lang="scss">
-.slider {
+.slider-news {
   overflow: hidden;
   margin-top: -100px;
 
-  .swiper {
+  & .swiper {
     width: 90%;
     margin: 0 auto;
     overflow: visible;

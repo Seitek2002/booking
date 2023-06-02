@@ -2,12 +2,18 @@
 import Header from "@/components/Header/Header.vue"
 import Hero from "@/components/Hero/Hero.vue"
 import Slider from "@/components/Slider/Slider.vue"
+import Cause from "@/components/Cause/Cause.vue"
+import Reviews from "@/components/Reviews/Reviews.vue"
+import Recomendation from "@/components/Recomendation/Recomendation.vue"
 </script>
 
 <template>
   <Header />
   <Hero />
   <Slider />
+  <Cause />
+  <Reviews />
+  <Recomendation />
 </template>
 
 <style lang="scss">
@@ -15,6 +21,7 @@ import Slider from "@/components/Slider/Slider.vue"
 
 body {
   font-family: "Roboto";
+  background-color: #f7f7f7;
 }
 
 h1,h2,h3,h4,h5,h6,p,body {
