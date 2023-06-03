@@ -134,7 +134,7 @@ const slides = ref([
 
   &__box {
     height: 340px;
-    max-width: 300px;
+    max-width: 280px;
     border-radius: 10px;
   }
 

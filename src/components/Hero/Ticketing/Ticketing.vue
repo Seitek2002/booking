@@ -26,6 +26,9 @@ import Qnty from './Qnty.vue'
 import LoaderTrain from '../LoaderTrain.vue'
 import LoaderBus from '../LoaderBus.vue'
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 defineProps(["currentTab"])
 
@@ -35,7 +38,8 @@ const handleSubmit = () => {
   isLoading.value = true;
 
   setTimeout(() => {
-    isLoading.value = false
+    isLoading.value = false;
+    router.push("/result")
   }, 3000)
 }
 </script>
