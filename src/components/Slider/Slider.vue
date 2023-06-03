@@ -99,6 +99,7 @@ const slides = ref([
       height: 48px;
       background: #fff;
       border-radius: 100%;
+      box-shadow: 0 12px 20px 0 rgba(0,0,0,.1);
 
       &::after {
         font-size: 20px;
@@ -111,6 +112,8 @@ const slides = ref([
       height: 48px;
       background: #fff;
       border-radius: 100%;
+      box-shadow: 0 12px 20px 0 rgba(0,0,0,.1);
+
       &::after {
         font-size: 20px;
         color: #000;

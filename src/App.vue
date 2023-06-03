@@ -5,6 +5,8 @@ import Slider from "@/components/Slider/Slider.vue"
 import Cause from "@/components/Cause/Cause.vue"
 import Reviews from "@/components/Reviews/Reviews.vue"
 import Recomendation from "@/components/Recomendation/Recomendation.vue"
+import Routes from "@/components/Routes/Routes.vue"
+import Footer from "@/components/Footer/Footer.vue"
 </script>
 
 <template>
@@ -14,6 +16,8 @@ import Recomendation from "@/components/Recomendation/Recomendation.vue"
   <Cause />
   <Reviews />
   <Recomendation />
+  <Routes />
+  <Footer />
 </template>
 
 <style lang="scss">
@@ -26,6 +30,11 @@ body {
 
 h1,h2,h3,h4,h5,h6,p,body {
   margin: 0;
+}
+
+input {
+  font-family: "Roboto";
+  font-size: 16px;
 }
 
 ul {

@@ -55,7 +55,7 @@ const currentTab = ref({
   &__tabs {
     display: flex;
     gap: 16px;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
   }
 

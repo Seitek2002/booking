@@ -23,7 +23,7 @@ import Qnty from './Qnty.vue'
   display: flex;
   gap: 10px;
   border-radius: 8px;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 
   &__form {
@@ -37,7 +37,7 @@ import Qnty from './Qnty.vue'
 
   &__btn {
     background: #01abfb;
-    font-size: 16px;
+    font-size: 24px;
     color: #fff;
     border: 3px solid #01abfb;
     padding: 0 16px;
