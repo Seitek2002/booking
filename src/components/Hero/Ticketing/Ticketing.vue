@@ -135,7 +135,7 @@ const handleSubmit = () => {
   }
 
   .loader {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background: #fff;
