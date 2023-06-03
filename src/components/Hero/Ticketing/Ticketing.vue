@@ -1,12 +1,18 @@
 <template>
   <div class="ticketing">
+    <div v-if="isLoading" class="loader">
+      <Loader />
+      <p>
+        Загрузка...
+      </p>
+    </div>
     <form @submit.prevent class="ticketing__form">
       <From />
       <To />
       <WhenFrom />
       <Qnty />
     </form>
-    <button class="ticketing__btn">Найти</button>
+    <button @click="handleSubmit" class="ticketing__btn">Найти</button>
   </div>
 </template>
 
@@ -16,6 +22,18 @@ import To from './To.vue'
 import WhenFrom from './WhenFrom.vue'
 import WhenTo from './WhenTo.vue'
 import Qnty from './Qnty.vue'
+import Loader from '../Loader.vue'
+import { ref } from 'vue'
+
+const isLoading = ref(false);
+
+const handleSubmit = () => {
+  isLoading.value = true;
+
+  setTimeout(() => {
+    isLoading.value = false
+  }, 3000)
+}
 </script>
 
 <style lang="scss">
@@ -110,6 +128,20 @@ import Qnty from './Qnty.vue'
         cursor: pointer;
       }
     }
+  }
+
+  .loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 }
 </style>
