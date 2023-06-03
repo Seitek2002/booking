@@ -51,6 +51,7 @@ onClickOutside(dropdownRef, () => isActive.value = false)
         gap: 15px;
         position: absolute;
         top: 30px;
+        z-index: 10;
     }
 
     &__option {
