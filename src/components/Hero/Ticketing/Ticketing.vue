@@ -1,7 +1,8 @@
 <template>
   <div class="ticketing">
     <div v-if="isLoading" class="loader">
-      <Loader />
+      <LoaderTrain v-if="currentTab === 'Ж/Д Билеты'" />
+      <LoaderBus v-if="currentTab === 'Автобусы'" />
       <p>
         Загрузка...
       </p>
@@ -22,8 +23,11 @@ import To from './To.vue'
 import WhenFrom from './WhenFrom.vue'
 import WhenTo from './WhenTo.vue'
 import Qnty from './Qnty.vue'
-import Loader from '../Loader.vue'
+import LoaderTrain from '../LoaderTrain.vue'
+import LoaderBus from '../LoaderBus.vue'
 import { ref } from 'vue'
+
+defineProps(["currentTab"])
 
 const isLoading = ref(false);
 

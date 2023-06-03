@@ -8,7 +8,7 @@
               {{ tab.tab }}
             </div>
           </div>
-          <Ticketing />
+          <Ticketing :currentTab="currentTab.tab" />
         </div>
       </div>
     </div>
