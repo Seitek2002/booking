@@ -8,7 +8,6 @@
           <div class="recomendation__icons">
             <img src="https://static.onetwotrip.com/images/index/mobileApp/app_store_desktop.svg" alt="" />
             <img src="https://static.onetwotrip.com/images/index/mobileApp/google_play_desktop.svg" alt="" />
-            <img src="https://static.onetwotrip.com/images/index/mobileApp/app_gallery_desktop.svg" alt="" />
           </div>
         </div>
         <div class="recomendation__img">

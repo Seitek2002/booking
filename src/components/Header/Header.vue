@@ -7,48 +7,57 @@
             </a>
             <nav>
                 <div class="header__nav">
-                    <Dropdown title="Сервисы" :options="[
-                        'Подарочные сертификаты',
-                        'Хочу на море',
-                        'Горнолыжные курорты',
-                        'Где ты был',
-                    ]" />
+                    Сервисы
                 </div>
                 <div class="header__nav">
-                    <Dropdown title="Путешествуйте чаще" :options="[
-                        'Персональные предложения',
-                        'Награды',
-                        'Кудаблин',
-                        'Блог',
-                        'Ребусы',
-                        'Спецпроекты',
-                    ]" />
+                    Путешествуйте чаще
                 </div>
                 <div class="header__nav">
-                    <Dropdown title="Поддержка 24/7" :options="[
-                        'Вопрос-Ответ',
-                        'Контакты',
-                    ]" />
+                    Поддержка 24/7
                 </div>
                 <div class="header__nav">
-                    <button class="header__btn">
+                    <button @click="isShow = true" class="header__btn">
                         Личный кабинет
                     </button>
                 </div>
-                <div class="header__nav"></div>
             </nav>
         </div>
     </div>
   </header>
+  <div v-if="isShow" class="modal">
+    <AuthModal />
+    <div @click="isShow = false" class="close">x</div>
+  </div>
 </template>
 
 <script setup>
-import Dropdown from "./Dropdown/Dropdown.vue"
+import { ref } from "vue"
+import AuthModal from "../AuthModal/AuthModal.vue"
 
-
+const isShow = ref(false);
 </script>
 
 <style lang="scss">
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    background: rgba($color: #000000, $alpha: 0.4);
+}
+
+.close {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    color: #ccc;
+    font-size: 40px;
+    cursor: pointer;
+}
+
 .header {
     position: absolute;
     width: 100%;
@@ -70,6 +79,7 @@ import Dropdown from "./Dropdown/Dropdown.vue"
         display: flex;
         align-items: center;
         gap: 25px;
+        color: #fff;
     }
 
     &__btn {

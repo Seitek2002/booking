@@ -46,8 +46,6 @@
             <div class="result__price">от 5 267 с</div>
             <div class="result__bonus">
               за 1 пассажира
-              <br />
-              +105 трипкоинов
             </div>
             <button class="result__btn">Выбрать</button>
           </div>
@@ -94,8 +92,6 @@
             <div class="result__price">от 5 267 с</div>
             <div class="result__bonus">
               за 1 пассажира
-              <br />
-              +105 трипкоинов
             </div>
             <button class="result__btn">Выбрать</button>
           </div>
