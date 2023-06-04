@@ -23,7 +23,7 @@
           <div class="result-header__nav-item">Бонусы</div>
           <div class="result-header__nav-item">Поддержка</div>
           <div class="result-header__nav-item">Мой заказ</div>
-          <div class="result-header__nav-item">
+          <div v-if="route.path !== '/own-room'" class="result-header__nav-item">
             <button>Войти</button>
           </div>
         </nav>
@@ -34,9 +34,10 @@
 
 <script setup>
 import { ref } from 'vue'
-import { useRouter } from "vue-router"
+import { useRoute, useRouter } from "vue-router"
 
 const router = useRouter()
+const route = useRoute()
 
 const tabs = ref([
   {
