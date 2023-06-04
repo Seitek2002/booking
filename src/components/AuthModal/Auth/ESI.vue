@@ -55,7 +55,7 @@
           title="Войти"
           bg="#212121"
           :disabled="isLoading"
-          @click="handleClick, router.push('/order-list-notarius')"
+          @click="handleClick, router.push('/own-room')"
         />
       </form>
     </div>
