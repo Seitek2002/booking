@@ -1,4 +1,6 @@
 <template>
+  <ResultHeader />
+  <DateSlider />
   <section class="result">
     <div class="container">
       <div class="result__content">
@@ -103,13 +105,17 @@
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+import ResultHeader from "@/components/Header/ResultHeader.vue"
+import DateSlider from "@/components/DateSlider/DateSlider.vue"
+
+</script>
 
 <style lang="scss">
 .result {
   width: 70%;
   margin: 0 auto;
-  padding: 150px 0;
+  padding: 50px 0;
 
   &__item {
     display: flex;
