@@ -94,13 +94,15 @@
       </label>
       <span class="auth-item__forgot"> Забыли пароль? </span>
 
-      <button class="auth-item__btn" @click="handleLogin">Войти</button>
+      <button class="auth-item__btn" @click="$router.push('/own-room')">Войти</button>
     </form>
   </div>
 </template>
 
 <script>
 import { useRouter } from "vue-router";
+
+// const router = useRouter()
 
 export default {
   name: "LoginAndPassword",

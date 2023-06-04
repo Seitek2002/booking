@@ -3,14 +3,14 @@
     <div class="container">
       <div class="result-header__content">
         <div class="result-header__left">
-          <a href="#" class="result-header__logo">
+          <a href="#" @click.prevent="router.push('/')" class="result-header__logo">
             <img src="https://joldor.gov.kg/uploads/logotok.png" alt="logo" />
           </a>
           <div class="result-header__tabs">
             <div
               v-for="tab in tabs"
               :key="tab"
-              @click="currentTab = tab"
+              @click="currentTab = tab, router.push(`${tab.path}`)"
               class="result-header__tab"
               :class="{ active: currentTab.tab === tab.tab }"
             >
@@ -34,14 +34,19 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from "vue-router"
+
+const router = useRouter()
 
 const tabs = ref([
   {
     tab: 'Автобусы',
+    path: "/result-bus",
     img: 'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80',
   },
   {
     tab: 'Ж/Д Билеты',
+    path: "/result",
     img: 'https://images.unsplash.com/photo-1515165562839-978bbcf18277?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
   },
 ])
