@@ -4,7 +4,7 @@
       <div class="recomendation__content">
         <div class="recomendation__info">
           <h2>Скачайте приложение</h2>
-          <p>Отсканируйте QR-код и получайте двойные бонусы за покупку билетов и бронирование отелей</p>
+          <p>Отсканируйте QR-код и получайте  бонусы за покупку билетов</p>
           <div class="recomendation__icons">
             <img src="https://static.onetwotrip.com/images/index/mobileApp/app_store_desktop.svg" alt="" />
             <img src="https://static.onetwotrip.com/images/index/mobileApp/google_play_desktop.svg" alt="" />
