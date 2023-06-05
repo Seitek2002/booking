@@ -5,7 +5,7 @@
       <div class="room__wrapper">
         <div class="room__profile">
           <div class="room__item">
-            <div class="room__name">seitek_2002</div>
+            <div class="room__name">Личный кабинет</div>
           </div>
           <nav class="room__nav">
             <div class="room__nav-item">
